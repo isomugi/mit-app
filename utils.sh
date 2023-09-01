@@ -73,7 +73,7 @@ lambda_deploy_all(){
 s3_deploy(){
     sudo yum -y install jq
     
-    bucket_name="${name}-internship"
+    bucket_name="isomugi-mti"
     
     policy=$(printf '{
         "Version": "2012-10-17",
@@ -104,7 +104,7 @@ s3_deploy(){
 
 s3_update(){
     npm run build
-    aws s3 cp ./dist s3://${name}-internship --recursive
+    aws s3 cp ./dist s3://isomugi-test --recursive
 }
 
 deletename(){

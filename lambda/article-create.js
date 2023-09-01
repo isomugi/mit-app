@@ -1,7 +1,7 @@
 const { DynamoDBClient, PutItemCommand } = require("@aws-sdk/client-dynamodb");
 const { marshall } = require("@aws-sdk/util-dynamodb");
 const client = new DynamoDBClient({ region: "ap-northeast-1" });
-const TableName = "team2-article";
+const TableName = "mti-article";
  
 exports.handler = async (event, context) => {
   const response = {
